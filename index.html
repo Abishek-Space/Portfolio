@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abishek P | AI & Cybersecurity Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom scroll animations */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-slate-300 font-sans selection:bg-cyan-500/30 selection:text-cyan-200">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="container mx-auto px-6 md:px-12 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-tighter text-slate-100 hover:text-cyan-400 transition-colors">
+                AP<span class="text-cyan-500">.</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex gap-8 items-center">
+                <a href="#experience" class="text-sm font-medium text-slate-400 hover:text-cyan-400 transition-colors">Experience</a>
+                <a href="#projects" class="text-sm font-medium text-slate-400 hover:text-cyan-400 transition-colors">Projects</a>
+                <a href="#skills" class="text-sm font-medium text-slate-400 hover:text-cyan-400 transition-colors">Skills</a>
+                <a href="#education" class="text-sm font-medium text-slate-400 hover:text-cyan-400 transition-colors">Education</a>
+                <a href="mailto:abishekpalanisamym@gmail.com" class="px-5 py-2 text-sm font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-full hover:bg-cyan-500/20 transition-all">
+                    Contact Me
+                </a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="menu-btn" class="md:hidden text-slate-300 focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-b border-zinc-800 px-6 py-4 mt-4 flex-col gap-4">
+            <a href="#experience" class="mobile-link text-slate-300 hover:text-cyan-400 transition-colors">Experience</a>
+            <a href="#projects" class="mobile-link text-slate-300 hover:text-cyan-400 transition-colors">Projects</a>
+            <a href="#skills" class="mobile-link text-slate-300 hover:text-cyan-400 transition-colors">Skills</a>
+            <a href="#education" class="mobile-link text-slate-300 hover:text-cyan-400 transition-colors">Education</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] h-[600px] md:h-[800px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-violet-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 md:px-12 relative z-10 text-center max-w-4xl fade-in-section">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900/50 border border-zinc-800 mb-8 backdrop-blur-sm">
+                <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-cyan-500"></span>
+                </span>
+                <span class="text-sm font-medium text-slate-300">Available for Opportunities</span>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6">
+                Hi, I'm <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 text-transparent bg-clip-text">Abishek P</span>
+            </h1>
+
+            <p class="text-xl md:text-2xl text-slate-400 mb-8 font-light max-w-2xl mx-auto">
+                AI & Data Science | Cybersecurity
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4 text-sm text-slate-400 mb-12">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-cyan-500"></i> Coimbatore, Tamil Nadu, India
+                </div>
+                <div class="hidden sm:block text-zinc-700">•</div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="mail" class="w-4 h-4 text-cyan-500"></i> abishekpalanisamym@gmail.com
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="https://linkedin.com/in/abishek-p-ai" target="_blank" class="group flex items-center gap-2 px-6 py-3 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-cyan-500/50 rounded-xl transition-all">
+                    <i data-lucide="linkedin" class="w-5 h-5 text-slate-300 group-hover:text-cyan-400"></i>
+                    <span class="font-medium text-slate-300 group-hover:text-white">LinkedIn</span>
+                </a>
+                <a href="https://github.com/Abishek-Space" target="_blank" class="group flex items-center gap-2 px-6 py-3 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-violet-500/50 rounded-xl transition-all">
+                    <i data-lucide="github" class="w-5 h-5 text-slate-300 group-hover:text-violet-400"></i>
+                    <span class="font-medium text-slate-300 group-hover:text-white">GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 bg-zinc-950">
+        <div class="container mx-auto px-6 md:px-12 max-w-5xl">
+            <div class="flex items-center gap-3 mb-12 fade-in-section">
+                <div class="p-3 bg-zinc-900 rounded-xl border border-zinc-800 shadow-lg">
+                    <i data-lucide="briefcase" class="w-6 h-6 text-cyan-400"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-slate-500">
+                    Experience
+                </h2>
+            </div>
+
+            <div class="relative border-l-2 border-zinc-800/50 ml-4 md:ml-0 space-y-12">
+                <!-- Experience Item 1 -->
+                <div class="relative pl-8 md:pl-12 fade-in-section">
+                    <div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-zinc-950 border-2 border-cyan-500 flex items-center justify-center">
+                        <div class="w-2 h-2 rounded-full bg-cyan-400"></div>
+                    </div>
+                    <div class="bg-zinc-900/50 border border-zinc-800/80 p-6 md:p-8 rounded-2xl hover:border-cyan-500/30 transition-colors group">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-4">
+                            <div>
+                                <h3 className="text-xl md:text-2xl font-bold text-slate-100 mb-1 group-hover:text-cyan-400 transition-colors flex items-center gap-2">
+                                    <i data-lucide="shield" class="w-5 h-5 text-cyan-400"></i> AI & Cybersecurity Student Assistant
+                                </h3>
+                                <p class="text-lg text-slate-400">KPR Institute of Engineering and Technology</p>
+                            </div>
+                            <div class="flex flex-col items-start md:items-end gap-1">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-sm font-medium">
+                                    <i data-lucide="calendar" class="w-4 h-4"></i> Jan. 2026 – Present
+                                </span>
+                                <span class="text-sm text-slate-500 flex items-center gap-1">
+                                    <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Coimbatore, Tamil Nadu
+                                </span>
+                            </div>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex gap-3 text-slate-300 leading-relaxed">
+                                <i data-lucide="chevron-right" class="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5"></i>
+                                <span>Developed machine learning models using PyTorch and Scikit-Learn for data classification, including detection of phishing attempts and unusual network activity.</span>
+                            </li>
+                            <li class="flex gap-3 text-slate-300 leading-relaxed">
+                                <i data-lucide="chevron-right" class="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5"></i>
+                                <span>Prepared datasets using Pandas and NumPy by cleaning data and scaling features for model training.</span>
+                            </li>
+                            <li class="flex gap-3 text-slate-300 leading-relaxed">
+                                <i data-lucide="chevron-right" class="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5"></i>
+                                <span>Built REST APIs using FastAPI and PostgreSQL to store security logs and serve model predictions, with Docker used for testing.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="relative pl-8 md:pl-12 fade-in-section">
+                    <div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-zinc-950 border-2 border-cyan-500 flex items-center justify-center">
+                        <div class="w-2 h-2 rounded-full bg-cyan-400"></div>
+                    </div>
+                    <div class="bg-zinc-900/50 border border-zinc-800/80 p-6 md:p-8 rounded-2xl hover:border-cyan-500/30 transition-colors group">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-4">
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-slate-100 mb-1 group-hover:text-cyan-400 transition-colors flex items-center gap-2">
+                                    <i data-lucide="terminal" class="w-5 h-5 text-violet-400"></i> Information Technology Project Intern
+                                </h3>
+                                <p class="text-lg text-slate-400">PSG College of Technology</p>
+                            </div>
+                            <div class="flex flex-col items-start md:items-end gap-1">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-sm font-medium">
+                                    <i data-lucide="calendar" class="w-4 h-4"></i> Dec. 2023 – May 2025
+                                </span>
+                                <span class="text-sm text-slate-500 flex items-center gap-1">
+                                    <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Coimbatore, Tamil Nadu
+                                </span>
+                            </div>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex gap-3 text-slate-300 leading-relaxed">
+                                <i data-lucide="chevron-right" class="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5"></i>
+                                <span>Maintained computer laboratory infrastructure, managed local databases, and carried out routine data backups.</span>
+                            </li>
+                            <li class="flex gap-3 text-slate-300 leading-relaxed">
+                                <i data-lucide="chevron-right" class="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5"></i>
+                                <span>Developed web-based portal utilities using HTML/CSS, JavaScript, and SQL to simplify student record management.</span>
+                            </li>
+                            <li class="flex gap-3 text-slate-300 leading-relaxed">
+                                <i data-lucide="chevron-right" class="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5"></i>
+                                <span>Troubleshot hardware, software, and local network issues to keep systems running smoothly.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-zinc-950">
+        <div class="container mx-auto px-6 md:px-12 max-w-6xl">
+            <div class="flex items-center gap-3 mb-12 fade-in-section">
+                <div class="p-3 bg-zinc-900 rounded-xl border border-zinc-800 shadow-lg">
+                    <i data-lucide="code" class="w-6 h-6 text-cyan-400"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-slate-500">
+                    Featured Projects
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="group bg-zinc-900 border border-zinc-800 rounded-3xl p-8 hover:bg-zinc-800/80 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] flex flex-col justify-between fade-in-section">
+                    <div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-4 bg-zinc-950 rounded-2xl border border-zinc-800 group-hover:border-cyan-500/50 transition-colors">
+                                <i data-lucide="brain-circuit" class="w-6 h-6 text-cyan-400"></i>
+                            </div>
+                            <span class="text-sm font-medium text-slate-400 bg-zinc-950 px-3 py-1 rounded-full border border-zinc-800">
+                                Jan. 2026 – Present
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-100 mb-4 group-hover:text-cyan-400 transition-colors">
+                            AI Predictive Analytics Platform
+                        </h3>
+                        <p class="text-slate-400 leading-relaxed mb-8">
+                            Built an end-to-end machine learning application that processes structured datasets and delivers predictions with 94% accuracy. Connected a React frontend dashboard to a FastAPI backend to display charts and statistical summaries.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-sm font-medium bg-zinc-950 text-slate-300 border border-zinc-800 rounded-lg">Python</span>
+                        <span class="px-3 py-1 text-sm font-medium bg-zinc-950 text-slate-300 border border-zinc-800 rounded-lg">Scikit-Learn</span>
+                        <span class="px-3 py-1 text-sm font-medium bg-zinc-950 text-slate-300 border border-zinc-800 rounded-lg">FastAPI</span>
+                        <span class="px-3 py-1 text-sm font-medium bg-zinc-950 text-slate-300 border border-zinc-800 rounded-lg">React</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group bg-zinc-900 border border-zinc-800 rounded-3xl p-8 hover:bg-zinc-800/80 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] flex flex-col justify-between fade-in-section">
+                    <div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-4 bg-zinc-950 rounded-2xl border border-zinc-800 group-hover:border-violet-500/50 transition-colors">
+                                <i data-lucide="shield" class="w-6 h-6 text-violet-400"></i>
+                            </div>
+                            <span class="text-sm font-medium text-slate-400 bg-zinc-950 px-3 py-1 rounded-full border border-zinc-800">
+                                May 2026 – Present
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-100 mb-4 group-hover:text-cyan-400 transition-colors">
+                            Network Vulnerability Scanner
+                        </h3>
+                        <p class="text-slate-400 leading-relaxed mb-8">
+                            Built a Python tool that automates Nmap scans to find open ports and running services on target systems. Generated simple reports that list possible weaknesses.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-sm font-medium bg-zinc-950 text-slate-300 border border-zinc-800 rounded-lg">Python</span>
+                        <span class="px-3 py-1 text-sm font-medium bg-zinc-950 text-slate-300 border border-zinc-800 rounded-lg">Nmap</span>
+                        <span class="px-3 py-1 text-sm font-medium bg-zinc-950 text-slate-300 border border-zinc-800 rounded-lg">Linux</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-zinc-950">
+        <div class="container mx-auto px-6 md:px-12 max-w-5xl">
+            <div class="flex items-center gap-3 mb-12 fade-in-section">
+                <div class="p-3 bg-zinc-900 rounded-xl border border-zinc-800 shadow-lg">
+                    <i data-lucide="brain-circuit" class="w-6 h-6 text-cyan-400"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-slate-500">
+                    Technical Arsenal
+                </h2>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Languages -->
+                <div class="bg-zinc-900/30 border border-zinc-800/50 rounded-2xl p-8 fade-in-section">
+                    <h3 class="text-xl font-semibold text-slate-200 mb-6 flex items-center gap-2">
+                        <i data-lucide="code" class="w-5 h-5 text-violet-400"></i> Languages
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-zinc-900 border border-zinc-800 text-slate-300 rounded-xl hover:text-cyan-400 hover:border-cyan-500/50 transition-all">Python</span>
+                        <span class="px-4 py-2 bg-zinc-900 border border-zinc-800 text-slate-300 rounded-xl hover:text-cyan-400 hover:border-cyan-500/50 transition-all">SQL</span>
+                        <span class="px-4 py-2 bg-zinc-900 border border-zinc-800 text-slate-300 rounded-xl hover:text-cyan-400 hover:border-cyan-500/50 transition-all">JavaScript</span>
+                        <span class="px-4 py-2 bg-zinc-900 border border-zinc-800 text-slate-300 rounded-xl hover:text-cyan-400 hover:border-cyan-500/50 transition-all">HTML / CSS</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks & Libraries -->
+                <div class="bg-zinc-900/30 border border-zinc-800/50 rounded-2xl p-8 fade-in-section">
+                    <h3 class="text-xl font-semibold text-slate-200 mb-6 flex items-center gap-2">
+                        <i data-lucide="layers" class="w-5 h-5 text-violet-400"></i> Frameworks & Libraries
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-zinc-900 border border-zinc-800 text-slate-300 rounded-xl hover:text-cyan-400 hover:border-cyan-500/50 transition-all">PyTorch</span>
+                        <span class="px-4 py-2 bg-zinc-900 border border-zinc-800 text-slate-300 rounded-xl hover:text-cyan-400 hover:border-cyan-500/50 transition-all">Scikit-Learn</span>
+                        <span class="px-4 py-2 bg-zinc-900 border border-zinc-800 text-slate-300 rounded-xl hover:text-cyan-400 hover:border-cyan-500/50 transition-all">pandas</span>
+                        <span class="px-4 py-2 bg-zinc-900 border border-zinc-800 text-slate-300 rounded-xl hover:text-cyan-400 hover:border-cyan-500/50 transition-all">NumPy</span>
+                        <span class="px-4 py-2 bg-zinc-900 border border-zinc-800 text-slate-300 rounded-xl hover:text-cyan-400 hover:border-cyan-500/50 transition-all">FastAPI</span>
+                        <span class="px-4 py-2 bg-zinc-900 border border-zinc-800 text-slate-300 rounded-xl hover:text-cyan-400 hover:border-cyan-500/50 transition-all">React</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Technologies -->
+                <div class="bg-zinc-900/30 border border-zinc-800/50 rounded-2xl p-8 fade-in-section">
+                    <h3 class="text-xl font-semibold text-slate-200 mb-6 flex items-center gap-2">
+                        <i data-lucide="wrench" class="w-5 h-5 text-violet-400"></i> Tools & Technologies
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-zinc-900 border border-zinc-800 text-slate-300 rounded-xl hover:text-cyan-400 hover:border-cyan-500/50 transition-all">Git</span>
+                        <span class="px-4 py-2 bg-zinc-900 border border-zinc-800 text-slate-300 rounded-xl hover:text-cyan-400 hover:border-cyan-500/50 transition-all">Docker</span>
+                        <span class="px-4 py-2 bg-zinc-900 border border-zinc-800 text-slate-300 rounded-xl hover:text-cyan-400 hover:border-cyan-500/50 transition-all">Linux</span>
+                        <span class="px-4 py-2 bg-zinc-900 border border-zinc-800 text-slate-300 rounded-xl hover:text-cyan-400 hover:border-cyan-500/50 transition-all">Nmap</span>
+                        <span class="px-4 py-2 bg-zinc-900 border border-zinc-800 text-slate-300 rounded-xl hover:text-cyan-400 hover:border-cyan-500/50 transition-all">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section id="education" class="py-24 bg-zinc-950">
+        <div class="container mx-auto px-6 md:px-12 max-w-6xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Education -->
+                <div>
+                    <div class="flex items-center gap-3 mb-12 fade-in-section">
+                        <div class="p-3 bg-zinc-900 rounded-xl border border-zinc-800 shadow-lg">
+                            <i data-lucide="graduation-cap" class="w-6 h-6 text-cyan-400"></i>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-slate-500">
+                            Education
+                        </h2>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="p-6 bg-zinc-900/50 border border-zinc-800 rounded-2xl hover:border-violet-500/30 transition-colors fade-in-section">
+                            <h3 class="text-lg font-bold text-slate-100 mb-2">Bachelor of Technology in Artificial Intelligence and Data Science</h3>
+                            <p class="text-cyan-400 font-medium mb-4">KPR Institute of Engineering and Technology</p>
+                            <div class="flex flex-wrap items-center gap-4 text-sm text-slate-500">
+                                <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-4 h-4"></i> Aug. 2025 – May 2028</span>
+                                <span class="flex items-center gap-1"><i data-lucide="map-pin" class="w-4 h-4"></i> Coimbatore, Tamil Nadu</span>
+                            </div>
+                        </div>
+
+                        <div class="p-6 bg-zinc-900/50 border border-zinc-800 rounded-2xl hover:border-violet-500/30 transition-colors fade-in-section">
+                            <h3 class="text-lg font-bold text-slate-100 mb-2">Diploma in Information Technology</h3>
+                            <p class="text-cyan-400 font-medium mb-4">PSG College of Technology</p>
+                            <div class="flex flex-wrap items-center gap-4 text-sm text-slate-500">
+                                <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-4 h-4"></i> Aug. 2022 – May 2025</span>
+                                <span class="flex items-center gap-1"><i data-lucide="map-pin" class="w-4 h-4"></i> Coimbatore, Tamil Nadu</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div>
+                    <div class="flex items-center gap-3 mb-12 fade-in-section">
+                        <div class="p-3 bg-zinc-900 rounded-xl border border-zinc-800 shadow-lg">
+                            <i data-lucide="award" class="w-6 h-6 text-cyan-400"></i>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-100 to-slate-500">
+                            Certifications
+                        </h2>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="group p-5 bg-zinc-900/30 border border-zinc-800/80 rounded-2xl hover:bg-zinc-900 transition-colors flex items-start gap-4 fade-in-section">
+                            <div class="mt-1 p-2 bg-zinc-950 rounded-lg border border-zinc-800 group-hover:border-cyan-500/50">
+                                <i data-lucide="award" class="w-5 h-5 text-violet-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-200 font-semibold mb-1 group-hover:text-cyan-400 transition-colors">First Prize, Hackathon (YUKTHI)</h3>
+                                <p class="text-sm text-slate-400 mb-2">Baselios Mathews II College of Engineering</p>
+                                <span class="text-xs font-medium text-slate-500 bg-zinc-950 px-2 py-1 rounded-md border border-zinc-800">Sep. 2026</span>
+                            </div>
+                        </div>
+
+                        <div class="group p-5 bg-zinc-900/30 border border-zinc-800/80 rounded-2xl hover:bg-zinc-900 transition-colors flex items-start gap-4 fade-in-section">
+                            <div class="mt-1 p-2 bg-zinc-950 rounded-lg border border-zinc-800 group-hover:border-cyan-500/50">
+                                <i data-lucide="award" class="w-5 h-5 text-violet-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-200 font-semibold mb-1 group-hover:text-cyan-400 transition-colors">Cybersecurity Hands-on Training</h3>
+                                <p class="text-sm text-slate-400 mb-2">KGISL MicroCollege (NSDC)</p>
+                                <span class="text-xs font-medium text-slate-500 bg-zinc-950 px-2 py-1 rounded-md border border-zinc-800">Jan. 2025</span>
+                            </div>
+                        </div>
+
+                        <div class="group p-5 bg-zinc-900/30 border border-zinc-800/80 rounded-2xl hover:bg-zinc-900 transition-colors flex items-start gap-4 fade-in-section">
+                            <div class="mt-1 p-2 bg-zinc-950 rounded-lg border border-zinc-800 group-hover:border-cyan-500/50">
+                                <i data-lucide="award" class="w-5 h-5 text-violet-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-200 font-semibold mb-1 group-hover:text-cyan-400 transition-colors">Networking Workshop</h3>
+                                <p class="text-sm text-slate-400 mb-2">Refinement Software Solutions Pvt. Ltd.</p>
+                                <span class="text-xs font-medium text-slate-500 bg-zinc-950 px-2 py-1 rounded-md border border-zinc-800">Jun. 2024</span>
+                            </div>
+                        </div>
+
+                        <div class="group p-5 bg-zinc-900/30 border border-zinc-800/80 rounded-2xl hover:bg-zinc-900 transition-colors flex items-start gap-4 fade-in-section">
+                            <div class="mt-1 p-2 bg-zinc-950 rounded-lg border border-zinc-800 group-hover:border-cyan-500/50">
+                                <i data-lucide="award" class="w-5 h-5 text-violet-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-slate-200 font-semibold mb-1 group-hover:text-cyan-400 transition-colors">Artificial Intelligence Intern</h3>
+                                <p class="text-sm text-slate-400 mb-2">Adroit Technologies Innovative Solution Pvt. Ltd.</p>
+                                <span class="text-xs font-medium text-slate-500 bg-zinc-950 px-2 py-1 rounded-md border border-zinc-800">May 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 border-t border-zinc-900 py-12 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-bold tracking-tighter text-slate-100 mb-6">
+                AP<span class="text-cyan-500">.</span>
+            </h2>
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="https://linkedin.com/in/abishek-p-ai" target="_blank" class="text-slate-400 hover:text-cyan-400 transition-colors">
+                    <i data-lucide="linkedin" class="w-6 h-6"></i>
+                </a>
+                <a href="https://github.com/Abishek-Space" target="_blank" class="text-slate-400 hover:text-violet-400 transition-colors">
+                    <i data-lucide="github" class="w-6 h-6"></i>
+                </a>
+                <a href="mailto:abishekpalanisamym@gmail.com" class="text-slate-400 hover:text-cyan-400 transition-colors">
+                    <i data-lucide="mail" class="w-6 h-6"></i>
+                </a>
+            </div>
+            <p class="text-slate-500 text-sm">
+                © <span id="year"></span> Abishek P. Built with HTML, Tailwind CSS & JavaScript.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Render Lucide Icons
+        lucide.createIcons();
+
+        // Current Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar Scroll Background Change
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-zinc-950/80', 'backdrop-blur-md', 'border-b', 'border-zinc-800/50', 'py-4');
+                navbar.classList.remove('bg-transparent', 'py-6');
+            } else {
+                navbar.classList.remove('bg-zinc-950/80', 'backdrop-blur-md', 'border-b', 'border-zinc-800/50', 'py-4');
+                navbar.classList.add('bg-transparent', 'py-6');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        // Close mobile menu on click link
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+
+        // Fade-in on scroll animation
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
